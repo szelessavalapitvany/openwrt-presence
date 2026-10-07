@@ -1,0 +1,14 @@
+{
+	"admin/smarthome/wifi-presence": {
+		"title": "Wifi presence",
+		"order": 2,
+		"action": {
+			"type": "view",
+			"path": "smarthome/wifi-presence"
+		},
+		"depends": {
+			"acl": [ "luci-app-smarthome-presence" ],
+			"uci": { "wifi_presence": true }
+		}
+	}
+}

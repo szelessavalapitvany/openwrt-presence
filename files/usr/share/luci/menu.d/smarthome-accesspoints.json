@@ -1,0 +1,13 @@
+{
+	"admin/smarthome/accesspoints": {
+		"title": "Access points",
+		"order": 4,
+		"action": {
+			"type": "view",
+			"path": "smarthome/accesspoints"
+		},
+		"depends": {
+			"acl": [ "luci-app-smarthome-presence" ]
+		}
+	}
+}

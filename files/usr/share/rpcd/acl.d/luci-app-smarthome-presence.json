@@ -1,0 +1,11 @@
+{
+        "luci-app-smarthome-presence": {
+                "description": "Grant access to presence configuration",
+                "read": {
+                        "uci": [ "wifi_presence", "presence", "accesspoints" ]
+                },
+                "write": {
+                        "uci": [ "wifi_presence", "presence", "accesspoints" ]
+                }
+        }
+}

@@ -1,0 +1,14 @@
+{
+	"admin/smarthome/presence": {
+		"title": "Presence",
+		"order": 3,
+		"action": {
+			"type": "view",
+			"path": "smarthome/presence"
+		},
+		"depends": {
+			"acl": [ "luci-app-smarthome-presence" ],
+			"uci": { "presence": true }
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+        "admin/smarthome": {
+                "title": "Smart home",
+                "order": 60,
+                "action": {
+                        "type": "firstchild"
+                }
+        }
+}
