@@ -19,7 +19,7 @@ The module can be installed on a standard OpenWrt system and provides presence i
 
 Connect to the OpenWrt router via SSH and run:
 
-    wget -qO- https://openwrt.szelessavalapitvany.hu/smarthome/OpenWrt_ALL_version/presence/install.sh | sh
+    wget -qO- https://raw.githubusercontent.com/szelessavalapitvany/openwrt-presence/main/install.sh | sh
 
 The installer automatically detects the package manager, installs the required dependencies, downloads the module files and restarts the required LuCI services.
 
@@ -121,7 +121,7 @@ A modul hagyományos OpenWrt rendszerre is telepíthető, és a jelenléti infor
 
 Jelentkezz be SSH-n keresztül az OpenWrt routerre, majd futtasd:
 
-    wget -qO- https://openwrt.szelessavalapitvany.hu/smarthome/OpenWrt_ALL_version/presence/install.sh | sh
+    wget -qO- https://raw.githubusercontent.com/szelessavalapitvany/openwrt-presence/main/install.sh | sh
 
 A telepítő automatikusan felismeri a csomagkezelőt, telepíti a szükséges függőségeket, letölti a modul fájljait, majd újraindítja a szükséges LuCI szolgáltatásokat.
 
