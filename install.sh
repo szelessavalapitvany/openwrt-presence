@@ -2,7 +2,7 @@
 
 set -e
 
-BASE_URL="https://openwrt.szelessavalapitvany.hu/smarthome/OpenWrt_ALL_version/presence"
+BASE_URL="https://raw.githubusercontent.com/szelessavalapitvany/openwrt-presence/main"
 TMP_DIR="/tmp/presence-install"
 
 echo "Presence installer"
