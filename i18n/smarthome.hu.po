@@ -1,0 +1,164 @@
+msgid "Smart home"
+msgstr "Okos otthon"
+
+msgid "Setup"
+msgstr "Beállítás"
+
+msgid "smart home"
+msgstr "okos otthon"
+
+msgid "In this page you can install the %s base functionality."
+msgstr "Ezen az oldalon az alapvető %s funkciók telepítését hajthatja végre."
+
+msgid "To use %s functions, you must attach an USB storage first!"
+msgstr "Az %s funkciók használatához egy USB háttértár csatlakoztatása szükséges!"
+
+msgid "Click \"%s\" to partition and format the attached usb device with extroot and data partitions."
+msgstr "Kattinson az \"%s\" gombra a csatlakoztatott USB háttértár partícionálásához és formázásához extroot és adat partíciókkal."
+
+msgid "The partitions are needed for %s functionality."
+msgstr "A partíciók szükségesek az %s funkciók működéséhez."
+
+msgid "Warning! All data will be lost on the USB device!"
+msgstr "Figyelem! Az USB háttértáron található minden adat el fog veszni!"
+
+msgid "Setup extroot"
+msgstr "Extroot beállítása"
+
+msgid "Format USB device"
+msgstr "USB háttértár formázása"
+
+msgid "Error occured during partitioning sda device. Please retry!"
+msgstr "Hiba történt az sda eszköz particionálása során. Kérem próbálja újra!"
+
+msgid "Error occured during formatting extroot (/dev/sda1) partition to ext4 filesystem. Please retry!"
+msgstr "Hiba történt az extroot (/dev/sda1) partíció ext4 fájrendszerre történő formázása közben. Kérem próbálja újra!"
+
+msgid "Error occured during formatting data (/dev/sda2) partition to ext4 filesystem. Please retry!"
+msgstr "Hiba történ az adat (/dev/sda2) partíció ext4 fájrendszerre történő formázása közben. Kérem próbálja újra!"
+
+msgid "Error occured during setting up extroot. Please retry!"
+msgstr "Hiba történt az extroot fájlrendszer beállítása közben. Kérem próbálja újra!"
+
+msgid "Please wait, partitioning in progress..."
+msgstr "Kérem várjon, partícionálás folyamatban..."
+
+msgid "Please wait, formatting data partition to ext4 filesystem in progress..."
+msgstr "Kérem várjon, az adat partíció ext4 fájrendszerre történő formázása folyamatban..."
+
+msgid "Please wait, formatting extroot partition to ext4 filesystem in progress..."
+msgstr "Kérem várjon, az extroot partíció ext4 fájlrendszerre történő formázása folyamatban..."
+
+msgid "Setup done. The system is rebooting and installing and starting required packages..."
+msgstr "Beállítás befejezve. A rendszer újraindul, majd telepíti és indítja a szükséges komponenseket..."
+
+msgid "Please wait, copying data from overlay to extroot in progress..."
+msgstr "Kérem várjon, az adatok másolása az extroot partícióra folyamatban..."
+
+msgid "%s extroot functionality configured correctly. If you want to uninstall it, please reset the router!"
+msgstr "%s az extroot funkcionalitás beállítva. Ha el szeretné távolítani, kérem állítsa alaphelyzetbe a routert!"
+
+msgid "Warning! To use this function a device with at least %d GB capacity required! The attached device has only %.2f GB in size!"
+msgstr "Figyelem! A funkció használatához minimum %d GB kapacitású eszköz szükséges! A csatlakoztatott eszköz csak %.2f GB méretű!"
+
+msgid "Smarthome installing in progress. Please wait. Install details:"
+msgstr "A smarthome komponensek telepítése folyamatban. Kérem várjon! A telepítés részletei:"
+
+msgid "Wifi presence"
+msgstr "Wifi jelenlét"
+
+msgid "You can configure the wifi presence function."
+msgstr "Wifi jelenlét érzékelés funkció konfigurálása."
+
+msgid "You can check if at least one of the clients in group is active at the URL"
+msgstr "Azt, hogy a csoport legalább egy kliense aktív-e a következő URL-en ellenőrizheti: "
+
+msgid "group name"
+msgstr "csoport név"
+
+msgid "You must replace the <b>group name</b> with one below defined client group name."
+msgstr "A <b>csoport név</b> paraméter helyére az egyik lentebb definiált kliens csoport neve helyettesítendő."
+
+msgid "The URL return with HTTP 200 status code and <b>true/false</b> values on success, or HTTP 404 status code with the error message on error."
+msgstr "Az URL HTTP 200 státusz kóddal és a <b>true/false</b> értékkel tér vissza sikeres futás esetén, hiba esetén pedig HTTP 404 státusz kóddal és hibaüzenettel."
+
+msgid "Client groups"
+msgstr "Kliens csoportok"
+
+msgid "You can define a groups of %sclients, add more clients to it. One client can belong to more group."
+msgstr "Alább %skliens csoportokat hozhat létre. Egy csoporthoz több kliens is rendelhető, valamint egy kliens több csoporthoz is tartozhat."
+
+msgid "Create new group"
+msgstr "Új csoport létrehozása"
+
+msgid "Client hostname"
+msgstr "Kliens gépnév"
+
+msgid "Unnamed"
+msgstr "Névtelen"
+
+msgid "An error occurred while saving the form:"
+msgstr "Hiba történt az űrlap mentése során:"
+
+msgid "Option \"%s\" contains an invalid input value."
+msgstr "A \"%s\" beállítás érvénytelen értéket tartalmaz."
+
+msgid "Attention! Only clients connected to the router's wifi or to the defined access points can be detected!"
+msgstr "Figyelem! Csak a router által szórt wifihez, vagy a rögzített hozzáférési pontokhoz csatlakozott kliensek észlelhetőek!"
+
+msgid "Presence"
+msgstr "Jelenlét"
+
+msgid "You can configure the presence function."
+msgstr "Jelenlét érzékelés funkció konfigurálása."
+
+msgid "Attention! Only clients request IP Address from the router DHCP server can be detected!"
+msgstr "Figyelem! Csak a router DHCP szerverétől IP címet kérő kliensek észlelhetőek!"
+
+msgid "For use this method, you must turn off the randomized MAC address on your clients"
+msgstr "A funkció használatához a klienseken szükséges kikapcsolni a privát MAC cím használatát"
+
+msgid "You can do that with one of the the following methods:"
+msgstr "A következő módszerek egyikével tehető meg:"
+
+msgid "device."
+msgstr "eszköz esetén."
+
+msgid "Ping timeout"
+msgstr "Ping időkörlát"
+
+msgid "This method detect the client availability with <b>ping</b> command. The timeout value is in milliseconds."
+msgstr "Ez a módszer a kliens elérhetőségét a <b>ping</b> parancs segítségével ellenőrzi. Az időkörlát megadása milliszekundumban lehetséges."
+
+msgid "Wifi access points on LAN"
+msgstr "Vezeték nélküli hozzáférési pontok a helyi hálózaton"
+
+msgid "You can configure the connected access points for detecting wifi presence."
+msgstr "Megadhatja a wifi jelenlét érzékelésnél használandó hozzáférési pontokat."
+
+msgid "Attention! Only those access points are supported, which returns the connected wifi clients MAC addresses in JSON array format on the defined REST endpoint! E.g.: [\"11:22:33:44:55:66\",\"AA:BB:CC:DD:EE:FF\",\"FF:EE:DD:CC:BB:AA\"]"
+msgstr "Figyelem! Csak azon hozzáférési pontok támogatottak, amelyek a kapcsolódott wifi kliensek MAC címeit JSON tömb formátumban képesek visszaadni a rögzített REST végponton! Pl.: [\"11:22:33:44:55:66\",\"AA:BB:CC:DD:EE:FF\",\"FF:EE:DD:CC:BB:AA\"]"
+
+msgid "Access points"
+msgstr "Hozzáférési pontok"
+
+msgid "You can add multiple access points to the configuration."
+msgstr "Több hozzáférési pontot is hozzáadhat a konfigurációhoz."
+
+msgid "REST endpoint"
+msgstr "REST végpont"
+
+msgid "Identification method"
+msgstr "Azonosítás módja"
+
+msgid "IP address"
+msgstr "IP-cím"
+
+msgid "Recommended: use the fixed IP address of the access point."
+msgstr "Ajánlott: a hozzáférési pont fix IP-címének használata."
+
+msgid "MAC address"
+msgstr "MAC-cím"
+
+msgid "The MAC address of the access point."
+msgstr "A hozzáférési pont MAC-címe."

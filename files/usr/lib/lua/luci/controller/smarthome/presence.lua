@@ -134,8 +134,30 @@ function action_wifi_presence(group)
                                                 return
                                         end
 
-                                        local ipaddr = get_ip_by_macaddr(section.macaddress)
+                                        local ipaddr = nil
 
+
+                                        if section.addresstype == "ip" then
+
+                                                ipaddr = section.ipaddress
+
+                                        elseif section.addresstype == "mac" then
+
+                                                if section.macaddress then
+
+                                                        ipaddr = get_ip_by_macaddr(section.macaddress)
+
+                                                end
+
+                                        elseif section.ipaddress then
+
+                                                ipaddr = section.ipaddress
+
+                                        elseif section.macaddress then
+
+                                                ipaddr = get_ip_by_macaddr(section.macaddress)
+
+                                        end
                                         if not ipaddr then
                                                 return
                                         end

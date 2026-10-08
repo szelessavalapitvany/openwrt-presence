@@ -40,6 +40,7 @@ etc/config/presence
 etc/config/wifi_presence
 usr/lib/lua/luci/controller/smarthome/presence.lua
 usr/lib/lua/luci/view/smarthome/presence.htm
+usr/lib/lua/luci/i18n/smarthome.hu.lmo
 usr/share/luci/menu.d/smarthome.json
 usr/share/luci/menu.d/smarthome-accesspoints.json
 usr/share/luci/menu.d/smarthome-presence.json
