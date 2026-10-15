@@ -10,6 +10,7 @@ The module can be installed on a standard OpenWrt system and provides presence i
 - Network-based presence detection using ping
 - Multiple presence groups
 - Multiple OpenWrt access point support
+- Secondary access points configurable by IP address or MAC address
 - LuCI configuration interface
 - Simple HTTP API with `true` / `false` responses
 - Support for both `apk` and `opkg` based OpenWrt versions
@@ -42,6 +43,10 @@ Multiple MAC addresses can be assigned to one presence group.
 
 A group is considered present if at least one configured device is reachable.
 
+#### Screenshot
+
+![Network-based presence configuration](screenshot/lan.png)
+
 ### Wifi presence
 
 Wi-Fi-based presence detection.
@@ -50,17 +55,51 @@ OpenWrt checks the list of clients currently connected to the local Wi-Fi interf
 
 Clients are identified by hostname and associated with their MAC addresses using DHCP lease information.
 
+Clients connected to configured secondary OpenWrt access points can also be included.
+
+#### Screenshot
+
+![Wi-Fi presence configuration](screenshot/wifi.png)
+
 ### Access points
 
 Additional OpenWrt routers or access points can be included in Wi-Fi presence detection.
 
-The main router can query remote access points for their currently connected Wi-Fi clients.
+The main router queries the secondary access points for their currently connected Wi-Fi clients.
+
+Access points can be identified by:
+
+- IP address — recommended
+- MAC address — available as a fallback method
+
+Using a fixed IP address for secondary access points is recommended because it does not depend on a DHCP lease being available.
 
 The default REST endpoint is:
 
     /cgi-bin/luci/get-wifi-clients
 
-A compatible client-list module must be installed on the secondary OpenWrt router.
+A lightweight client-list API must be installed on every secondary OpenWrt access point.
+
+Project:
+
+https://github.com/szelessavalapitvany/openwrt-wifi-client-api
+
+Install it on the secondary OpenWrt router with:
+
+    wget -qO- https://raw.githubusercontent.com/szelessavalapitvany/openwrt-wifi-client-api/main/install.sh | sh
+
+The endpoint returns the MAC addresses of currently connected Wi-Fi clients as a JSON array.
+
+Example:
+
+    [
+      "11:22:33:44:55:66",
+      "AA:BB:CC:DD:EE:FF"
+    ]
+
+#### Screenshot
+
+![OpenWrt access point configuration](screenshot/acces.png)
 
 ## HTTP API
 
@@ -112,6 +151,7 @@ A modul hagyományos OpenWrt rendszerre is telepíthető, és a jelenléti infor
 - Hálózat alapú jelenlétérzékelés ping segítségével
 - Több jelenléti csoport
 - Több OpenWrt access point támogatása
+- Másodlagos access pointok megadása IP-cím vagy MAC-cím alapján
 - LuCI beállítófelület
 - Egyszerű HTTP API `true` / `false` válasszal
 - `apk` és `opkg` alapú OpenWrt verziók támogatása
@@ -144,6 +184,10 @@ Egy jelenléti csoporthoz több MAC-cím is megadható.
 
 A csoport akkor tekinthető jelenlévőnek, ha legalább egy beállított eszköz elérhető.
 
+#### Képernyőkép
+
+![Hálózat alapú jelenlétérzékelés beállítása](screenshot/lan.png)
+
 ### Wifi presence
 
 Wi-Fi alapú jelenlétérzékelés.
@@ -152,17 +196,51 @@ Az OpenWrt az aktuálisan a helyi Wi-Fi interfészekhez csatlakozott kliensek li
 
 A kliensek azonosítása hostname alapján történik, amelyet a rendszer DHCP lease adatok segítségével kapcsol össze a MAC-címmel.
 
+A beállított másodlagos OpenWrt access pointokhoz csatlakozott kliensek is bevonhatók a jelenlétérzékelésbe.
+
+#### Képernyőkép
+
+![Wi-Fi jelenlétérzékelés beállítása](screenshot/wifi.png)
+
 ### Access points
 
 További OpenWrt routerek vagy access pointok is bevonhatók a Wi-Fi jelenlétérzékelésbe.
 
-A főrouter lekérdezheti a távoli access pointokat az aktuálisan kapcsolódó Wi-Fi kliensekről.
+A főrouter lekérdezi a másodlagos access pointokat az aktuálisan kapcsolódó Wi-Fi kliensekről.
+
+Az access point azonosítása kétféleképpen történhet:
+
+- IP-cím alapján — ajánlott
+- MAC-cím alapján — tartalék lehetőségként
+
+A másodlagos access pointokhoz fix IP-cím használata ajánlott, mert így a működés nem függ attól, hogy az access point rendelkezik-e DHCP lease bejegyzéssel.
 
 Az alapértelmezett REST végpont:
 
     /cgi-bin/luci/get-wifi-clients
 
-A másodlagos OpenWrt routeren ehhez kompatibilis klienslista-modult kell telepíteni.
+Minden másodlagos OpenWrt access pointra telepíteni kell a könnyű klienslista API modult.
+
+Projekt:
+
+https://github.com/szelessavalapitvany/openwrt-wifi-client-api
+
+Telepítés a másodlagos OpenWrt routeren:
+
+    wget -qO- https://raw.githubusercontent.com/szelessavalapitvany/openwrt-wifi-client-api/main/install.sh | sh
+
+A végpont JSON tömbként adja vissza az aktuálisan csatlakozott Wi-Fi kliensek MAC-címeit.
+
+Példa:
+
+    [
+      "11:22:33:44:55:66",
+      "AA:BB:CC:DD:EE:FF"
+    ]
+
+#### Képernyőkép
+
+![OpenWrt access point beállítása](screenshot/acces.png)
 
 ## HTTP API
 
